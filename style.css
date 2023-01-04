@@ -1,10 +1,13 @@
+* {
+    box-sizing: border-box;
+}
 html, body {
     margin: 0;
     height: 100%;
 }
 
 body {
-    
+    background-image: url(clear_sky.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,16 +17,64 @@ body {
 
 }
 
-#center_info {
+#search {
+    height: 20px;
+    width: 250px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+#city_name {
+    font-size: 30px;
+}
+#date_time {
+    font-size: 20px;
+}
+#center_info {
+    height: 70px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
 }
 
-.week_info {
-    display: flex;
+#degrees {
+    font-size: 35px;
 }
 
-.day_temperature {
+#info {
+    font-size: 20px;
+}
+.week_info {
+    width: 90%;
+    height: 200px;
     display: flex;
+    justify-content: space-between;
+}
+
+
+.day {
+    height: 200px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day_name {
+    font-size: 20px;
+}
+.day_temperature {
+    width: 75px;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-around;
+}
+
+.weather_icon {
+    height: 70px;
+    width: 70px;
 }

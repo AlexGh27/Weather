@@ -49,6 +49,7 @@ body {
     font-size: 20px;
 }
 .week_info {
+    margin-top: 100px;
     width: 90%;
     height: 200px;
     display: flex;
@@ -57,24 +58,35 @@ body {
 
 
 .day {
-    height: 200px;
-    width: 150px;
+    border: 2px solid white;
+    border-radius: 20%;
+    height: 250px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .day_name {
-    font-size: 20px;
+    font-size: 30px;
 }
 .day_temperature {
-    width: 75px;
+    width: 120px;
     display: flex;
     font-size: 18px;
     justify-content: space-between;
 }
 
+.min_temperature {
+    font-size: 25px;
+}
+
+.max_temperature {
+    font-size: 25px;
+}
+
 .weather_icon {
-    height: 70px;
-    width: 70px;
+    height: 100px;
+    width: 100px;
 }

@@ -27,12 +27,18 @@ body {
 }
 
 #city_name {
+    color: white;
+    text-shadow: 1px 1px black;
     font-size: 30px;
 }
 #date_time {
+    color: white;
+    text-shadow: 1px 1px black;
     font-size: 20px;
 }
 #center_info {
+    color: white;
+    text-shadow: 1px 1px black;
     height: 70px;
     width: 250px;
     display: flex;
@@ -69,6 +75,8 @@ body {
 }
 
 .day_name {
+    color: white;
+    text-shadow: 1px 1px black;
     font-size: 30px;
 }
 .day_temperature {
@@ -79,10 +87,14 @@ body {
 }
 
 .min_temperature {
+    color: white;
+    text-shadow: 1px 1px black;
     font-size: 25px;
 }
 
 .max_temperature {
+    color: white;
+    text-shadow: 1px 1px black;
     font-size: 25px;
 }
 

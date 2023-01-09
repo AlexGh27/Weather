@@ -14,15 +14,23 @@ function defaultWeather(response) {
     let wind = document.querySelector('#wind');
     wind.textContent = 'Wind: ' + Math.round(response.wind.speed) + ' km/h';
 
+
     let unixTime = response.dt;
-    console.log(unixTime);
+    let dateTime = document.querySelector('#date_time');
+    let date = new Date(unixTime * 1000).toLocaleDateString('en-uk');
+    let fullDate = new Date(unixTime * 1000);
+    let hours = fullDate.getHours();
+    let minutes = '0' + fullDate.getMinutes();
+
+
+    dateTime.textContent = date + ', ' + hours + ':' + minutes.substr(-2);
 }
 
 
 
 function fetchWeather() {
     const API_KEY = 'ac4b3a21bc90e7e4ae8ef6cb4b06fc97';
-    const city = 'Galati';
+    const city = 'Bucharest';
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`, {mode: 'cors'})
         .then(function(response) {
             return response.json();
@@ -30,6 +38,8 @@ function fetchWeather() {
         .then(function(response) {
             defaultWeather(response);
         })
+
+
 }
 
 export {defaultWeather, fetchWeather};

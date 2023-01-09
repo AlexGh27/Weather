@@ -1,4 +1,5 @@
 import './style.css';
-import {fetchWeather, defaultWeather} from './APIfetch.js';
+import {fetchWeather, defaultWeather, getWeatherData} from './APIfetch.js';
 
 fetchWeather();
+getWeatherData();

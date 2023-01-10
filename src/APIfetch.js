@@ -61,7 +61,14 @@ function searchWeather() {
 }
 
 
-export {defaultWeather, displayWeather, searchWeather};
+function getWeekWeather() {
+    
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Bucharest&appid=${API_KEY}`, {mode: 'cors'})
+        .then(function(response) {
+            console.log(response.json())
+        })
+    }
+export {defaultWeather, displayWeather, searchWeather, getWeekWeather};
 
 
 

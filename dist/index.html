@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div id="search">
         <input type="text" id="searchBar" placeholder="Search for a city">
-        <button type="submit" id="searchButton">Search</button>
+        <button id="searchButton">Search</button>
     </div>
     <div id="cityName"></div>
-    <div id="date_time">04/01/2023, 10:11</div>
+    <div id="date_time"></div>
     <div id="center_info">
         <div id="degrees"></div>
         <div id="info">
@@ -22,6 +22,7 @@
             <div id="wind">Wind: 3km/h</div>
         </div>
     </div>
+<!----
     <div class="week_info">
         <div class="day">
             <div class="day_name">Wednesday</div>
@@ -81,5 +82,6 @@
             </div>
         </div>
     </div>
+-->
 </body>
 </html>

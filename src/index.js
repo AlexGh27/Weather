@@ -1,5 +1,16 @@
 import './style.css';
-import {fetchWeather, defaultWeather, getWeatherData} from './APIfetch.js';
+import {defaultWeather, displayWeather, searchWeather} from './APIfetch.js';
 
-fetchWeather();
-getWeatherData();
+const searchButton = document.querySelector('#searchButton');
+const city = document.querySelector('#searchBar').value;
+
+searchButton.addEventListener('click', function(e) {
+    if (city === '') {
+        alert('Please enter a city name!')
+    }
+    else {
+        searchWeather();
+    }
+})
+
+defaultWeather();

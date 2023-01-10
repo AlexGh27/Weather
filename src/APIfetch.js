@@ -1,4 +1,18 @@
-function defaultWeather(response) {
+const API_KEY = 'ac4b3a21bc90e7e4ae8ef6cb4b06fc97';
+
+function defaultWeather() {
+    const city = 'Bucharest';
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`, {mode: 'cors'})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(response) {
+            displayWeather(response);
+        })
+
+}
+
+function displayWeather(response) {
     let cityName = document.querySelector('#cityName');
     cityName.textContent = response.name;
 
@@ -26,23 +40,21 @@ function defaultWeather(response) {
     dateTime.textContent = date + ', ' + hours + ':' + minutes.substr(-2);
 }
 
-
-
-function fetchWeather() {
-    const API_KEY = 'ac4b3a21bc90e7e4ae8ef6cb4b06fc97';
-    const city = 'Bucharest';
+function searchWeather() {
+    
+    const city = document.querySelector('#searchBar').value;
+    
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`, {mode: 'cors'})
         .then(function(response) {
             return response.json();
         })
         .then(function(response) {
-            defaultWeather(response);
+            displayWeather(response);
         })
-
-
 }
 
-export {defaultWeather, fetchWeather};
+
+export {defaultWeather, displayWeather, searchWeather};
 
 
 

@@ -31,18 +31,25 @@ function displayWeather(response) {
 
     let unixTime = response.dt;
     let dateTime = document.querySelector('#date_time');
-    let date = new Date(unixTime * 1000).toLocaleDateString('en-uk');
+    let date = new Date(unixTime * 1000);
+    // let date = new Date(unixTime * 1000).toLocaleDateString('en-uk');
     let fullDate = new Date(unixTime * 1000);
     let hours = fullDate.getHours();
     let minutes = '0' + fullDate.getMinutes();
 
-
-    dateTime.textContent = date + ', ' + hours + ':' + minutes.substr(-2);
+    dateTime.textContent = date;
+     //dateTime.textContent = date + ', ' + hours + ':' + minutes.substr(-2);
 }
 
 function searchWeather() {
     
-    const city = document.querySelector('#searchBar').value;
+    let city = document.querySelector('#searchBar').value;
+    if (city.length < 1) {
+        city = 'Bucharest';
+    }
+    else {
+        city = document.querySelector('#searchBar').value;
+    }
     
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`, {mode: 'cors'})
         .then(function(response) {

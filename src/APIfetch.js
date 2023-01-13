@@ -63,12 +63,55 @@ function searchWeather() {
 
 function getWeekWeather() {
     
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Bucharest&appid=${API_KEY}`, {mode: 'cors'})
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Bucharest&appid=${API_KEY}&units=metric`, {mode: 'cors'})
         .then(function(response) {
-            console.log(response.json())
+            console.log(response.json());
+            return response.json();
+    })
+        .then(function(response) {
+            displayWeeklyWeather(response);
         })
+
+}
+
+function getAValue() {
+    let currentDateTime = new Date();
+    let currentHour = currentDateTime.getHours();
+    
+    if (currentHour >= 0 && currentHour <=3) {
+        let A = 8;
     }
-export {defaultWeather, displayWeather, searchWeather, getWeekWeather};
+    else if(currentHour >= 3 && currentHour <=6) {
+        let A = 7;
+    }
+    else if(currentHour >= 6 && currentHour <=9) {
+        let A = 6;
+    }
+    else if(currentHour >= 9 && currentHour <=12) {
+        let A = 5;
+    }
+    else if(currentHour >= 12 && currentHour <=15) {
+        let A = 4;
+    }
+    else if(currentHour >= 15 && currentHour <=18) {
+        let A = 3;
+    }
+    else if(currentHour >= 18 && currentHour <=21) {
+        let A = 2;
+    }
+    else if(currentHour >= 21 && currentHour <=24) {
+        let A = 1;
+    }
+    return A;
+}
+
+function displayWeeklyWeather(response) {
+    let max1 = document.querySelector('#max1');
+    max1.textContent = Math.max(response.list[5].main.temp_max,
+                                response.list[6].main.temp_max);
+}
+
+export {defaultWeather, displayWeather, searchWeather, getWeekWeather, displayWeeklyWeather, getAValue};
 
 
 

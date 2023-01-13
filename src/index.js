@@ -1,5 +1,5 @@
 import './style.css';
-import {defaultWeather, displayWeather, searchWeather, getWeekWeather} from './APIfetch.js';
+import {defaultWeather, displayWeather, searchWeather, getWeekWeather, getAValue} from './APIfetch.js';
 
 const searchButton = document.querySelector('#searchButton');
 
@@ -10,3 +10,4 @@ searchButton.addEventListener('click', searchWeather)
 
 defaultWeather();
 getWeekWeather();
+getAValue();

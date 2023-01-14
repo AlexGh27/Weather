@@ -75,8 +75,9 @@ function getWeekWeather() {
             return response.json();
     })
         .then(function(response) {
-            displayWeeklyWeather(response);
+            displayWeeklyWeather();
         })
+       
 
 }
 
@@ -117,33 +118,100 @@ function getAValue() {
         let A = 1;
         return A;
     }
-    
 }
 
 function displayWeeklyWeather(response) {
     let A = getAValue();
-
+    let weekDays = ['Mon', 'Tue', 'wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    
     let max1 = document.querySelector('#max1');
-    let firstDayTemperature = Math.max(response.list[A].main.temp_max,
-                                response.list[A+1].main.temp_max,
-                                response.list[A+2].main.temp_max,
-                                response.list[A+3].main.temp_max,
-                                response.list[A+4].main.temp_max,
-                                response.list[A+5].main.temp_max,
-                                response.list[A+6].main.temp_max,
-                                response.list[A+7].main.temp_max);
-    max1.textContent = Math.round(firstDayTemperature) + '°C';
+    let firstDayMax = Math.max(response.list[A].main.temp_max,
+                               response.list[A+1].main.temp_max,
+                               response.list[A+2].main.temp_max,
+                               response.list[A+3].main.temp_max,
+                               response.list[A+4].main.temp_max,
+                               response.list[A+5].main.temp_max,
+                               response.list[A+6].main.temp_max,
+                               response.list[A+7].main.temp_max);
+    max1.textContent = Math.round(firstDayMax) + '°C';
+    let day1 = document.querySelector('#day1');
+    day1.textContent = response.list[A].dt;
     
     let max2 = document.querySelector('#max2');
-    let secondDayTemperature = Math.max(response.list[A+8].main.temp_max,
-                                        response.list[A+9].main.temp_max,
-                                        response.list[A+10].main.temp_max,
-                                        response.list[A+11].main.temp_max,
-                                        response.list[A+12].main.temp_max,
-                                        response.list[A+13].main.temp_max,
-                                        response.list[A+14].main.temp_max,
-                                        response.list[A+15].main.temp_max);
-    max2.textContent = Math.round(secondDayTemperature) + '°C';
+    let secondDayMax = Math.max(response.list[A+8].main.temp_max,
+                                response.list[A+9].main.temp_max,
+                                response.list[A+10].main.temp_max,
+                                response.list[A+11].main.temp_max,
+                                response.list[A+12].main.temp_max,
+                                response.list[A+13].main.temp_max,
+                                response.list[A+14].main.temp_max,
+                                response.list[A+15].main.temp_max);
+    max2.textContent = Math.round(secondDayMax) + '°C';
+
+    let max3 = document.querySelector('#max3');
+    let thirdDayMax = Math.max(response.list[A+16].main.temp_max,
+                               response.list[A+17].main.temp_max,
+                               response.list[A+18].main.temp_max,
+                               response.list[A+19].main.temp_max,
+                               response.list[A+20].main.temp_max,
+                               response.list[A+22].main.temp_max,
+                               response.list[A+23].main.temp_max);
+    max3.textContent = Math.round(thirdDayMax) + '°C';
+
+    let max4 = document.querySelector('#max4');
+    let fourthDayMax = Math.max(response.list[A+24].main.temp_max,
+                                response.list[A+25].main.temp_max,
+                                response.list[A+26].main.temp_max,
+                                response.list[A+27].main.temp_max,
+                                response.list[A+28].main.temp_max,
+                                response.list[A+29].main.temp_max,
+                                response.list[A+30].main.temp_max,
+                                response.list[A+31].main.temp_max);
+    max4.textContent = Math.round(fourthDayMax) + '°C';
+    
+    let min1 = document.querySelector('#min1');
+    let firstDayMin = Math.min(response.list[A].main.temp_min,
+                               response.list[A+1].main.temp_min,
+                               response.list[A+2].main.temp_min,
+                               response.list[A+3].main.temp_min,
+                               response.list[A+4].main.temp_min,
+                               response.list[A+5].main.temp_min,
+                               response.list[A+6].main.temp_min,
+                               response.list[A+7].main.temp_min);
+    min1.textContent = Math.round(firstDayMin) + '°C';
+
+    let min2 = document.querySelector('#min2');
+    let secondDayMin = Math.min(response.list[A+8].main.temp_min,
+                                response.list[A+9].main.temp_min,
+                                response.list[A+10].main.temp_min,
+                                response.list[A+11].main.temp_min,
+                                response.list[A+12].main.temp_min,
+                                response.list[A+13].main.temp_min,
+                                response.list[A+14].main.temp_min,
+                                response.list[A+15].main.temp_min);
+    min2.textContent = Math.round(secondDayMin) + '°C';
+
+    let min3 = document.querySelector('#min3');
+    let thirdDayMin = Math.min(response.list[A+16].main.temp_min,
+                               response.list[A+17].main.temp_min,
+                               response.list[A+18].main.temp_min,
+                               response.list[A+19].main.temp_min,
+                               response.list[A+20].main.temp_min,
+                               response.list[A+21].main.temp_min,
+                               response.list[A+22].main.temp_min,
+                               response.list[A+23].main.temp_min);
+    min3.textContent = Math.round(thirdDayMin) + '°C';
+
+    let min4 = document.querySelector('#min4');
+    let fourthDayMin = Math.min(response.list[A+24].main.temp_min,
+                                response.list[A+25].main.temp_min,
+                                response.list[A+26].main.temp_min,
+                                response.list[A+27].main.temp_min,
+                                response.list[A+28].main.temp_min,
+                                response.list[A+29].main.temp_min,
+                                response.list[A+30].main.temp_min,
+                                response.list[A+31].main.temp_min);
+    min4.textContent = Math.round(fourthDayMin) + '°C';
 }
 
 export {defaultWeather, displayWeather, searchWeather, getWeekWeather, displayWeeklyWeather, getAValue};

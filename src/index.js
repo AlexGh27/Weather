@@ -6,9 +6,12 @@ const searchButton = document.querySelector('#searchButton');
 
 const city = document.querySelector('#searchBar').value;
 
-searchButton.addEventListener('click', searchWeather)
+searchButton.addEventListener('click', () => {
+    searchWeather();
+    getWeekWeather();
+})
+ 
 
 getAValue();
 defaultWeather();
 getWeekWeather();
-displayWeeklyWeather();

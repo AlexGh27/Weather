@@ -29,16 +29,14 @@ function displayWeather(response) {
     wind.textContent = 'Wind: ' + Math.round(response.wind.speed) + ' km/h';
 
 
+    let weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     let unixTime = response.dt;
     let dateTime = document.querySelector('#date_time');
     let date = new Date(unixTime * 1000);
-    // let date = new Date(unixTime * 1000).toLocaleDateString('en-uk');
-    let fullDate = new Date(unixTime * 1000);
-    let hours = fullDate.getHours();
-    let minutes = '0' + fullDate.getMinutes();
-
-    dateTime.textContent = date;
-     //dateTime.textContent = date + ', ' + hours + ':' + minutes.substr(-2);
+    console.log(date);
+    
+    dateTime.textContent = weekDays[date.getDay()] + ', ' + date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
 }
 
 function searchWeather() {
@@ -75,7 +73,7 @@ function getWeekWeather() {
             return response.json();
     })
         .then(function(response) {
-            displayWeeklyWeather();
+            displayWeeklyWeather(response);
         })
        
 
@@ -122,7 +120,7 @@ function getAValue() {
 
 function displayWeeklyWeather(response) {
     let A = getAValue();
-    let weekDays = ['Mon', 'Tue', 'wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    let weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     
     let max1 = document.querySelector('#max1');
     let firstDayMax = Math.max(response.list[A].main.temp_max,
@@ -134,8 +132,13 @@ function displayWeeklyWeather(response) {
                                response.list[A+6].main.temp_max,
                                response.list[A+7].main.temp_max);
     max1.textContent = Math.round(firstDayMax) + '°C';
+
     let day1 = document.querySelector('#day1');
-    day1.textContent = response.list[A].dt;
+    let unixTime1 = response.list[A].dt;
+    let date1 = new Date(unixTime1 * 1000);
+    day1.textContent = weekDays[date1.getDay()];
+
+
     
     let max2 = document.querySelector('#max2');
     let secondDayMax = Math.max(response.list[A+8].main.temp_max,
@@ -148,6 +151,13 @@ function displayWeeklyWeather(response) {
                                 response.list[A+15].main.temp_max);
     max2.textContent = Math.round(secondDayMax) + '°C';
 
+    let day2 = document.querySelector('#day2');
+    let unixTime2 = response.list[A+8].dt;
+    let date2 = new Date(unixTime2 * 1000);
+    day2.textContent = weekDays[date2.getDay()];
+
+
+
     let max3 = document.querySelector('#max3');
     let thirdDayMax = Math.max(response.list[A+16].main.temp_max,
                                response.list[A+17].main.temp_max,
@@ -157,6 +167,13 @@ function displayWeeklyWeather(response) {
                                response.list[A+22].main.temp_max,
                                response.list[A+23].main.temp_max);
     max3.textContent = Math.round(thirdDayMax) + '°C';
+
+    let day3 = document.querySelector('#day3');
+    let unixTime3 = response.list[A+16].dt;
+    let date3 = new Date(unixTime3 * 1000);
+    day3.textContent = weekDays[date3.getDay()];
+
+
 
     let max4 = document.querySelector('#max4');
     let fourthDayMax = Math.max(response.list[A+24].main.temp_max,
@@ -168,6 +185,13 @@ function displayWeeklyWeather(response) {
                                 response.list[A+30].main.temp_max,
                                 response.list[A+31].main.temp_max);
     max4.textContent = Math.round(fourthDayMax) + '°C';
+
+    let day4 = document.querySelector('#day4');
+    let unixTime4 = response.list[A+24].dt;
+    let date4 = new Date(unixTime4 * 1000);
+    day4.textContent = weekDays[date4.getDay()];
+
+
     
     let min1 = document.querySelector('#min1');
     let firstDayMin = Math.min(response.list[A].main.temp_min,

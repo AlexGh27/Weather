@@ -16,6 +16,13 @@ function displayWeather(response) {
     let cityName = document.querySelector('#cityName');
     cityName.textContent = response.name;
 
+
+    let mainImage = document.querySelector('#mainImage');
+    let weatherIcon = response.weather[0].icon;
+    weatherImage.src = `../src/WeatherIcons/${weatherIcon}.png`;
+    
+
+
     let degrees = document.querySelector('#degrees');
     degrees.textContent = Math.round(response.main.temp) + '°C';
 
@@ -34,7 +41,6 @@ function displayWeather(response) {
     let unixTime = response.dt;
     let dateTime = document.querySelector('#date_time');
     let date = new Date(unixTime * 1000);
-    console.log(date);
     
     dateTime.textContent = weekDays[date.getDay()] + ', ' + date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
 }

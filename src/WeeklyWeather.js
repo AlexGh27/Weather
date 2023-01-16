@@ -78,8 +78,6 @@ function displayWeeklyWeather(response) {
     
     let icon1 = document.querySelector('#icon1');
     icon1.src = `../src/WeatherIcons/${response.list[A+4].weather[0].icon}.png`;   
-    
-    console.log(response.list[A+5].dt_txt)
 
 
     let max2 = document.querySelector('#max2');

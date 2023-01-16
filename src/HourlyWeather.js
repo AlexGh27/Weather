@@ -16,12 +16,46 @@ function getHourWeather() {
         .then(function(response) {
             displayHourlyWeather(response);
         })
+        
     
 }
 
 function displayHourlyWeather(response) {
     let temp1 = document.querySelector('#temp1');
-    temp1.textContent = response.list[1].main.temp;
+    temp1.textContent = Math.round(response.list[1].main.temp) + '°C';
+
+    let hour1 = document.querySelector('#hour1');
+    hour1.textContent = response.list[1].dt_txt.substr(11, 2) + ':00';
+    
+
+    let temp2 = document.querySelector('#temp2');
+    temp2.textContent = Math.round(response.list[2].main.temp) + '°C';
+
+    let hour2 = document.querySelector('#hour2');
+    hour2.textContent = response.list[2].dt_txt.substr(11, 2) + ':00';
+
+
+    let temp3 = document.querySelector('#temp3');
+    temp3.textContent = Math.round(response.list[3].main.temp) + '°C';
+
+    let hour3 = document.querySelector('#hour3');
+    hour3.textContent = response.list[3].dt_txt.substr(11, 2) + ':00';
+
+
+    let temp4 = document.querySelector('#temp4');
+    temp4.textContent = Math.round(response.list[4].main.temp) + '°C';
+
+    let hour4 = document.querySelector('#hour4');
+    hour4.textContent = response.list[4].dt_txt.substr(11, 2) + ':00';
+
+
+
+
+
+
+
+
+
 }
 
 export {getHourWeather, displayHourlyWeather}

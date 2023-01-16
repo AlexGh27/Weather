@@ -45,7 +45,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1em;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 #degrees {
@@ -60,6 +60,14 @@ body {
     height: 200px;
     width: 1400px;
     border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hour {
+    height: 200px;
+    width: 175px;
+    border: 1px solid red;
 }
 .week_info {
     width: 90%;

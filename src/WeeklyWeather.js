@@ -1,3 +1,43 @@
+const API_KEY = 'ac4b3a21bc90e7e4ae8ef6cb4b06fc97';
+
+function getAValue() {
+    let currentDateTime = new Date();
+    let currentHour = currentDateTime.getHours();
+
+    if (currentHour >= 0 && currentHour <=3) {
+        let A = 8;
+        return A;
+    }
+    else if(currentHour >= 3 && currentHour <=6) {
+        let A = 7;
+        return A;
+    }
+    else if(currentHour >= 6 && currentHour <=9) {
+        let A = 6;
+        return A;
+    }
+    else if(currentHour >= 9 && currentHour <=12) {
+        let A = 5;
+        return A;
+    }
+    else if(currentHour >= 12 && currentHour <=15) {
+        let A = 4;
+        return A;
+    }
+    else if(currentHour >= 15 && currentHour <=18) {
+        let A = 3;
+        return A;
+    }
+    else if(currentHour >= 18 && currentHour <=21) {
+        let A = 2;
+        return A;
+    }
+    else if(currentHour >= 21 && currentHour <=24) {
+        let A = 1;
+        return A;
+    }
+}
+
 function getWeekWeather() {
     let city = document.querySelector('#searchBar').value;
     if (city.length < 1) {
@@ -149,4 +189,4 @@ function displayWeeklyWeather(response) {
     min4.textContent = Math.round(fourthDayMin) + '°C';
 }
 
-export {getWeekWeather, displayWeeklyWeather}
+export {getWeekWeather, displayWeeklyWeather, getAValue}

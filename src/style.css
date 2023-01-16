@@ -64,11 +64,25 @@ body {
     justify-content: space-between;
 }
 
-.hour {
+
+.hour_square {
     height: 200px;
     width: 175px;
     border: 1px solid red;
 }
+
+.hour {
+    height: 100px;
+    width: 175px;
+    border: 1px solid green;
+}
+
+.temp {
+    height: 100px;
+    width: 175px;
+    border: 1px solid yellow;
+}
+
 .week_info {
     width: 90%;
     height: 300px;

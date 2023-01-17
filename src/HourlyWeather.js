@@ -21,6 +21,14 @@ function getHourWeather() {
 }
 
 function displayHourlyWeather(response) {
+
+    let hour0 = document.querySelector('#hour0');
+    hour0.textContent = response.list[0].dt_txt.substr(11, 2) + ':00';
+
+    let temp0 = document.querySelector('#temp0');
+    temp0.textContent = Math.round(response.list[0].main.temp) + '°C';
+
+
     let temp1 = document.querySelector('#temp1');
     temp1.textContent = Math.round(response.list[1].main.temp) + '°C';
 
@@ -49,12 +57,11 @@ function displayHourlyWeather(response) {
     hour4.textContent = response.list[4].dt_txt.substr(11, 2) + ':00';
 
 
+    let temp5 = document.querySelector('#temp5');
+    temp5.textContent = Math.round(response.list[5].main.temp) + '°C';
 
-
-
-
-
-
+    let hour5 = document.querySelector('#hour5');
+    hour5.textContent = response.list[5].dt_txt.substr(11, 2) + ':00';
 
 }
 

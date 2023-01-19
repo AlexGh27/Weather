@@ -15,63 +15,97 @@ body {
     padding-top: 50px;
 
 }
+#upper_info {
+    width: 1700px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+
+#left_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+}
 
 #search {
     height: 20px;
-    width: 250px;
+    width: 245px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 30px;
-    margin-right: 1510px;
+}
+
+#searchBar {
+    height: 25px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    outline: 0;
+}
+
+::placeholder {
+    color: white;
+    opacity: 60%;
+}
+
+#searchButton {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
 }
 
 #cityName {
     color: white;
     text-shadow: 1px 1px black;
     font-size: 35px;
-    margin-left: 160px;
+    margin-left: 5px;
 }
 
-#date-description {
-    margin-top: 30px;
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 750px;
-}
 
 #date_time {
     color: white;
     text-shadow: 1px 1px black;
     font-size: 25px;
-    margin-top: 30px;
-    margin-right: 1480px;
+    margin-left: 5px;
 }
 
 #description {
     color: white;
-    font-size: 30px;
+    font-size: 22px;
     text-shadow: 1px 1px black;
-    margin-right: 150px;
+    margin-left: 5px;
+}
+
+#reporter {
+    height: 200px;
+    width: 200px;
 }
 
 #center_info {
     color: white;
     text-shadow: 1px 1px black;
-    height: 70px;
+    height: 60px;
     width: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
-    margin-bottom: 50px;
-    margin-top: 30px;
+    margin-top: 100px;
+    margin-right: 150px;
 }
 
 #degrees {
     font-size: 55px;
 }
+
 
 #info {
     font-size: 25px;
@@ -82,6 +116,7 @@ body {
     font-size: 25px;
     margin-right: 1200px;
     text-shadow: 1px 1px black;
+    margin-bottom: 20px;
 }
 
 
@@ -92,7 +127,6 @@ body {
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
-    margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px black;
 }

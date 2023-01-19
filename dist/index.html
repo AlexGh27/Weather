@@ -8,25 +8,34 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="search">
-        <input type="text" id="searchBar" placeholder="Search for a city" required>
-        <button type="submit" id="searchButton">Search</button>
+    <div id="upper_info">
+        <div id="left_info">
+            <div id="search">
+                <input type="text" id="searchBar" placeholder="Search for a city" required>
+                <img src="search.png" alt="Search Button" id="searchButton">
+            </div>
+            <div id="cityName"></div>
+            <div id="date_time"></div>
+            <div id="description">Mildly cloudy</div>
+        </div>
+        
+        <div id="center_info">
+            <img src="" alt="Weather image" id="weatherImage">
+            <div id="degrees"></div>
+            <div id="info">
+                <div id="feels"></div>
+                <div id="humidity"></div>
+                <div id="wind"></div>
+            </div>
+        </div>
+        
+        <img src="reporter.jpg" alt="Cat reporter" id="reporter">
     </div>
     
-    <div id="date-description">
-        <div id="cityName"></div>
-        <div id="description">Mildly cloudy</div>
-    </div>
-    <div id="date_time"></div>
-    <div id="center_info">
-        <img src="" alt="Weather image" id="weatherImage">
-        <div id="degrees"></div>
-        <div id="info">
-            <div id="feels"></div>
-            <div id="humidity"></div>
-            <div id="wind"></div>
-        </div>
-    </div>
+    
+    
+    
+    
     <div id="latertoday">Later today:</div>
     <div class="hour_info">
         <div class="hour_square">

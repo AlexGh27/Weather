@@ -62,6 +62,9 @@ function searchWeather() {
         .then(function(response) {
             displayWeather(response);
         })
+        .catch(function(error)) {
+            console.log("Sorry, an error has occured");
+        }
 }
 
 

@@ -87,6 +87,7 @@ body {
 #reporter {
     height: 200px;
     width: 200px;
+    margin-top: 25px;
 }
 
 #center_info {

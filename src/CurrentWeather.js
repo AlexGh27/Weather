@@ -44,6 +44,13 @@ function displayWeather(response) {
     let date = new Date(unixTime * 1000);
     
     dateTime.textContent = weekDays[date.getDay()] + ', ' + date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
+
+    let description = document.querySelector('#description');
+    let descriptionLower = response.weather[0].description;
+    let descriptionUpper = descriptionLower[0].toUpperCase() + descriptionLower.slice(1);
+    description.textContent = descriptionUpper;
+
+
 }
 
 function searchWeather() {
@@ -62,9 +69,9 @@ function searchWeather() {
         .then(function(response) {
             displayWeather(response);
         })
-        .catch(function(error)) {
-            console.log("Sorry, an error has occured");
-        }
+        .catch(function(error) {
+            alert("Sorry, city not found!");
+        })
 }
 
 

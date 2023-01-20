@@ -20,6 +20,14 @@ searchButton.addEventListener('click', () => {
     getWeekWeather();
 })
  
+searchButton.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        searchWeather();
+        getHourWeather();
+        getWeekWeather();
+    }
+    
+});
 
 getAValue();
 defaultWeather();

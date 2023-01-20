@@ -11,7 +11,7 @@ import {searchWeather, displayWeather} from './CurrentWeather.js';
 
 
 const searchButton = document.querySelector('#searchButton');
- 
+const searchBar = document.querySelector('#searchBar');
 const city = document.querySelector('#searchBar').value;
 
 searchButton.addEventListener('click', () => {
@@ -20,7 +20,7 @@ searchButton.addEventListener('click', () => {
     getWeekWeather();
 })
  
-searchButton.addEventListener('keypress', function(e) {
+document.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {
         searchWeather();
         getHourWeather();

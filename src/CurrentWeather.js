@@ -20,7 +20,7 @@ function displayWeather(response) {
 
     let mainImage = document.querySelector('#mainImage');
     let weatherIcon = response.weather[0].icon;
-    weatherImage.src = `/src/WeatherIcons/${weatherIcon}.png`;
+    weatherImage.src = `././src/WeatherIcons/${weatherIcon}.png`;
     
 
 

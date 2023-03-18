@@ -77,7 +77,7 @@ function displayWeeklyWeather(response) {
     day1.textContent = weekDays[date1.getDay()];
     
     let icon1 = document.querySelector('#icon1');
-    icon1.src = `/WeatherIcons/${response.list[A+4].weather[0].icon}.png`;   
+    icon1.src = `../src/WeatherIcons/${response.list[A+4].weather[0].icon}.png`;   
 
 
     let max2 = document.querySelector('#max2');
@@ -97,7 +97,7 @@ function displayWeeklyWeather(response) {
     day2.textContent = weekDays[date2.getDay()];
 
     let icon2 = document.querySelector('#icon2');
-    icon2.src = `/WeatherIcons/${response.list[A+12].weather[0].icon}.png`;
+    icon2.src = `../src/WeatherIcons/${response.list[A+12].weather[0].icon}.png`;
 
 
 
@@ -119,7 +119,7 @@ function displayWeeklyWeather(response) {
 
 
     let icon3 = document.querySelector('#icon3');
-    icon3.src = `/WeatherIcons/${response.list[A+20].weather[0].icon}.png`;
+    icon3.src = `../src/WeatherIcons/${response.list[A+20].weather[0].icon}.png`;
 
 
     let max4 = document.querySelector('#max4');
@@ -139,7 +139,7 @@ function displayWeeklyWeather(response) {
     day4.textContent = weekDays[date4.getDay()];
 
     let icon4 = document.querySelector('#icon4');
-    icon4.src = `/WeatherIcons/${response.list[A+28].weather[0].icon}.png`;    
+    icon4.src = `../src/WeatherIcons/${response.list[A+28].weather[0].icon}.png`;    
     
     
     let min1 = document.querySelector('#min1');

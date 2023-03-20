@@ -26,7 +26,7 @@ function displayHourlyWeather(response) {
     hour0.textContent = response.list[0].dt_txt.substr(11, 2) + ':00';
 
     let picture0 = document.querySelector('#picture0');
-    picture0.src = `../src/WeatherIcons/${response.list[0].weather[0].icon}.png`;
+    picture0.src = `./src/WeatherIcons/${response.list[0].weather[0].icon}.png`;
 
     let temp0 = document.querySelector('#temp0');
     temp0.textContent = Math.round(response.list[0].main.temp) + '°C';
@@ -37,7 +37,7 @@ function displayHourlyWeather(response) {
     temp1.textContent = Math.round(response.list[1].main.temp) + '°C';
 
     let picture1 = document.querySelector('#picture1');
-    picture1.src = `../src/WeatherIcons/${response.list[1].weather[0].icon}.png`;
+    picture1.src = `./src/WeatherIcons/${response.list[1].weather[0].icon}.png`;
 
     let hour1 = document.querySelector('#hour1');
     hour1.textContent = response.list[1].dt_txt.substr(11, 2) + ':00';
@@ -48,7 +48,7 @@ function displayHourlyWeather(response) {
     temp2.textContent = Math.round(response.list[2].main.temp) + '°C';
 
     let picture2 = document.querySelector('#picture2');
-    picture2.src = `../src/WeatherIcons/${response.list[2].weather[0].icon}.png`;
+    picture2.src = `./src/WeatherIcons/${response.list[2].weather[0].icon}.png`;
 
     let hour2 = document.querySelector('#hour2');
     hour2.textContent = response.list[2].dt_txt.substr(11, 2) + ':00';
@@ -59,7 +59,7 @@ function displayHourlyWeather(response) {
     temp3.textContent = Math.round(response.list[3].main.temp) + '°C';
 
     let picture3 = document.querySelector('#picture3');
-    picture3.src = `../src/WeatherIcons/${response.list[3].weather[0].icon}.png`;
+    picture3.src = `./src/WeatherIcons/${response.list[3].weather[0].icon}.png`;
 
     let hour3 = document.querySelector('#hour3');
     hour3.textContent = response.list[3].dt_txt.substr(11, 2) + ':00';
@@ -70,7 +70,7 @@ function displayHourlyWeather(response) {
     temp4.textContent = Math.round(response.list[4].main.temp) + '°C';
 
     let picture4 = document.querySelector('#picture4');
-    picture4.src = `../src/WeatherIcons/${response.list[4].weather[0].icon}.png`;
+    picture4.src = `./src/WeatherIcons/${response.list[4].weather[0].icon}.png`;
 
     let hour4 = document.querySelector('#hour4');
     hour4.textContent = response.list[4].dt_txt.substr(11, 2) + ':00';
@@ -81,7 +81,7 @@ function displayHourlyWeather(response) {
     temp5.textContent = Math.round(response.list[5].main.temp) + '°C';
 
     let picture5 = document.querySelector('#picture5');
-    picture5.src = `../src/WeatherIcons/${response.list[5].weather[0].icon}.png`;
+    picture5.src = `./src/WeatherIcons/${response.list[5].weather[0].icon}.png`;
 
     let hour5 = document.querySelector('#hour5');
     hour5.textContent = response.list[5].dt_txt.substr(11, 2) + ':00';

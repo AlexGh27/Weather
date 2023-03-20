@@ -139,7 +139,7 @@ function displayWeeklyWeather(response) {
     day4.textContent = weekDays[date4.getDay()];
 
     let icon4 = document.querySelector('#icon4');
-    icon4.src = `../src/WeatherIcons/${response.list[A+28].weather[0].icon}.png`;    
+    icon4.src = `src/WeatherIcons/${response.list[A+28].weather[0].icon}.png`;    
     
     
     let min1 = document.querySelector('#min1');

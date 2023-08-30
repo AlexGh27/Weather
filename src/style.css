@@ -12,15 +12,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 50px;
+    padding-top: 5vh;
 
 }
 #upper_info {
-    width: 1700px;
-    height: 200px;
+    width: 85%;
+    height: 22vh;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 5vh;
 }
 
 
@@ -29,7 +29,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 25px;
+    gap: 2em;
 }
 
 #search {
@@ -85,22 +85,21 @@ body {
 }
 
 #reporter {
-    height: 200px;
-    width: 200px;
-    margin-top: 25px;
+    height: 20vh;
+    width: 11vw;
+    margin-top: 1vh;
 }
 
 #center_info {
     color: white;
     text-shadow: 1px 1px black;
-    height: 60px;
-    width: 450px;
+    height: 20vh;
+    width: 25vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
-    margin-top: 100px;
-    margin-right: 150px;
+    gap: 1.5em;
+    margin-top: 0px;
 }
 
 #degrees {
@@ -109,46 +108,51 @@ body {
 
 
 #info {
-    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.5vw;
+    height: 20vh;
+    width: 20vw;
 }
 
 #latertoday{
     color: white;
     font-size: 25px;
-    margin-right: 1200px;
+    margin-right: 60%;
     text-shadow: 1px 1px black;
     margin-bottom: 20px;
 }
 
 
 .hour_info {
-    height: 200px;
-    width: 1400px;
+    height: 20vh;
+    width: 70%;
     border: 2px solid white;
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 1vh;
     box-shadow: 0 0 10px black;
 }
 
 
 .hour_square {
-    height: 200px;
-    width: 175px;
+    height: 20vh;
+    width: 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 1vw;
 }
 
 .temp {
     color: white;
     text-shadow: 1px 1px black;
-    
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5vw;
     
 }
 
@@ -156,7 +160,7 @@ body {
     color: white;
     text-shadow: 1px 1px black;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5vw;
     
 }
 
@@ -166,16 +170,16 @@ body {
 }
 
 #thisweek {
-    margin-top: 30px;
+    margin-top: 5vh;
     color: white;
     font-size: 25px;
-    margin-right: 1165px;
+    margin-right: 58%;
     text-shadow: 1px 1px black;
 }
 .week_info {
     width: 90%;
-    height: 300px;
-    width: 1400px;
+    height: 10vh;
+    width: 70%;
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
@@ -185,8 +189,8 @@ body {
 .day {
     border: 2px solid white;
     border-radius: 20%;
-    height: 250px;
-    width: 200px;
+    height: 22vh;
+    width: 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,10 +201,10 @@ body {
 .day_name {
     color: white;
     text-shadow: 1px 1px black;
-    font-size: 30px;
+    font-size: 1.5vw;
 }
 .day_temperature {
-    width: 120px;
+    width: 8vw;
     display: flex;
     font-size: 18px;
     justify-content: space-between;
@@ -209,13 +213,13 @@ body {
 .min_temperature {
     color: white;
     text-shadow: 1px 1px black;
-    font-size: 25px;
+    font-size: 1.5vw;
 }
 
 .max_temperature {
     color: white;
     text-shadow: 1px 1px black;
-    font-size: 25px;
+    font-size: 1.5vw;
 }
 
 .weather_icon {
